@@ -1,0 +1,2 @@
+https://github.com/alacritty/alacritty/releases/download/v0.6.0/alacritty.yml
+https://gitlab.com/dwt1/dotfiles/-/raw/master/.config/alacritty/alacritty.yml

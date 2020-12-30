@@ -1,10 +1,10 @@
-#!/usr/bin/sh
+#~/.dotfiles/xinitrc -> ~/.xinitrc
 
-#XinitRC
+# Hide mouse after 3 seconds of inactivity
+unclutter -idle 3 &
 
 #Run the autostart script
-bash ~/.rc/dwm_start.sh
+bash ~/.dotfiles/dwm_start.sh
 
 #Start Xorg server
 exec dwm
-#wine .dwm-win32/dwm-win32-alpha2.exe

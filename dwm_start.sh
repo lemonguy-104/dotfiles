@@ -1,15 +1,15 @@
 #!/usr/bin/bash
 
 #Bar
-dat(){
-    datt="$(date +%H:%M:%S)"
-    echo -e "$datt"
+datt(){
+    dat="$(date +%H:%M:%S)"
+    echo -e "$dat"
 }
 
-bat(){
-    batt="$(cat /sys/class/power_supply/BAT1/capacity)"
-    echo -e " $batt" #                  :D  
-}
+#batt(){
+#    bat="$(cat /sys/class/power_supply/BAT1/capacity)"
+#    echo -e " $bat" #                  :D  
+#}
 
 memo(){
     #mem=`free | awk '/Mem/ {printf "%d MiB/%d MiB\n", $3 / 1024.0, $2 / 1024.0 }'`
@@ -18,7 +18,7 @@ memo(){
 }
 
 while true; do
-    xsetroot -name "| $(memo) | $(dat) | $(bat) |"
+    xsetroot -name "| $(memo) | $(datt) | '' |"
     sleep 1s #Update time
 done &
 

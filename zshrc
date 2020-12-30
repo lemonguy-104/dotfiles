@@ -11,7 +11,7 @@ HISTFILE=~/.zsh_histfile
 #PS1='%F{magenta}%n%f@%F{blue}%m%f%F{yellow}%B%~%b%f $ '
 #PS1="[%F{magenta}%n%f @%  %F{blue}%M%f %F{yellow}%~%f]> "
 #PS1="%F{yellow}[%f %F{magenta}%n%f %F{green}@%f %F{blue}%M%f %F{green}%~%f %F{yellow}]%f %F{green}>%f "
-PS1="%F{red}[%f%F{yellow}%n%f %F{cyan}@%f %F{green}%M%f %F{cyan}%~%f%F{red}]%f%F{cyan}>%f "
+PS1="%F{red}[%f%F{yellow}%n%f%F{cyan}@%f%F{green}%M%f%F{cyan}%~%f%F{red}]%f%F{cyan}>%f "
 
 # Configurations
 unsetopt beep #beeps when errors
@@ -23,7 +23,17 @@ zstyle ':completion:*' menu select # Select on the menu
 setopt COMPLETE_ALIASES # Aliases completation
 zstyle ':completion::complete:*' gain-privileges 1 # For running with sudo
 
-# Alias
+#The fuck (https://github.com/nvbn/thefuck)
+eval $(thefuck --alias)
+
+#Cowsay saying a somithing from fortune cokkie when open a terminal (Requieres cowsay and fortune)
+fortune | cowsay -f tux ; echo 
+
+# Alias\
+
+#doas
+alias sudo="doas"
+
 # directories
 alias ls="exa"
 alias ll="exa -lh"
@@ -38,7 +48,7 @@ alias mv"mv -v"
 alias cp"cp -v"
 
 # utilities
-alias tlauncher="java -jar ~/tlauncher/TLauncher-2.72.jar"
+alias tlauncher="java -jar ~/mc/TLauncher-2.72.jar"
 alias go-dwm="cd /home/manu/suckless/dwm/"
 alias LG='xmodmap -e "keycode 62 = less greater"'
 alias clr="clear"
@@ -46,9 +56,10 @@ alias ":q"="exit"
 alias vim=nvim
 alias bim="sh -c vim"
 alias svim="sudo vim"
-alias dvim="doas vim"
-alias play="sh ~/.rc/play.sh"
+alias dvim="sudo vim"
+alias play="sh ~/.dotfiles/play.sh"
 alias yt-dl="youtube-dl"
+alias virt="sudo virt-manager"
 
 # System
 alias pls="sudo"
@@ -71,5 +82,4 @@ alias nf="neofetch | lolcat"
 alias nf1="neofetch | lolcat -a -s 500"
 alias pf="pfetch | lolcat"
 alias pf1="pfetch | lolcat -a -s 500"
-
 
