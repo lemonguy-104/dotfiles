@@ -18,7 +18,7 @@ memo(){
 }
 
 while true; do
-    xsetroot -name "| $(memo) | $(datt) | '' |"
+    xsetroot -name "| $(memo) | $(datt) |  |"
     sleep 1s #Update time
 done &
 
