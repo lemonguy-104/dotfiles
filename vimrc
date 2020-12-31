@@ -13,11 +13,12 @@ set rtp+=~/.config/nvim/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, this should go before any other plugin
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim' "https://github.com/VundleVim/Vundle.vim
 
 " Plugins go down here
 " Keep Plugin commands between vundle#begin/end.
-Plugin 'preservim/nerdtree'
+Plugin 'preservim/nerdtree' "https://github.com/preservim/nerdtree
+Plugin 'mattn/emmet-vim' "https://github.com/mattn/emmet-vim
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -92,7 +93,7 @@ autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | e
 autocmd BufWinEnter * silent NERDTreeMirror
 
 "Remaps
-nnoremap <C-n> :NERDTreeFocus<CR>
+"nnoremap <C-n> :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 
 "Icons
@@ -103,3 +104,9 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 "With font awesome (Evidently requires font awesome in the system)
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
+
+
+" Emmet
+" Remaps
+let g:user_emmet_mode='n' "Complition will only work in normal mode 
+let g:user_emmet_leader_key=',' "Instead of C+y+, is now ,+,
