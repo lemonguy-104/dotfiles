@@ -1,5 +1,6 @@
-"VimRC"
-
+" ~/.dotfiles/vimrc \
+"	-> ~/.config/nvim/init.vim \
+"	-> ~/.vimrc
 
 " Plugins
 " =================================
@@ -8,8 +9,8 @@ set nocompatible
 filetype off
 " This is necessary to get vundle working and allow it to manage plugins
 " set the runtime path to include Vundle and initialize
-" set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=~/.config/nvim/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
+" set rtp+=~/.config/nvim/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, this should go before any other plugin
@@ -37,7 +38,6 @@ filetype plugin on
 " 
 " =================================
 
-
 "Encoding
 set encoding=utf-8
 
@@ -57,7 +57,7 @@ set softtabstop=4
 "Syntax
 syntax on
 
-"List for completation (Ctrl+n)
+"List for compleion (Ctrl+n)
 set wildmode=longest,list,full
 
 " Backgrounf dark/light
@@ -75,6 +75,8 @@ set showcmd
 " See some info in the bottom right
 set ruler
 
+"Remaps -> https://vim.fandom.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)
+inoremap <C-z> <C-n> "Maps C-z to do what C-n does, complete
 
 "NERDTree
 
@@ -91,6 +93,10 @@ autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | e
 " ===
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * silent NERDTreeMirror
+" ===
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
 
 "Remaps
 "nnoremap <C-n> :NERDTreeFocus<CR>
@@ -104,7 +110,6 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 "With font awesome (Evidently requires font awesome in the system)
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
-
 
 " Emmet
 " Remaps

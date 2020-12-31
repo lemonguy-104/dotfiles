@@ -53,10 +53,6 @@ alias go-dwm="cd /home/manu/suckless/dwm/"
 alias LG='xmodmap -e "keycode 62 = less greater"'
 alias clr="clear"
 alias ":q"="exit"
-alias vim=nvim
-alias bim="sh -c vim"
-alias svim="sudo vim"
-alias dvim="sudo vim"
 alias play="sh ~/.dotfiles/play.sh"
 alias yt-dl="youtube-dl"
 alias virt="sudo virt-manager"
