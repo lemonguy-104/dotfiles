@@ -34,7 +34,7 @@ fortune | cowsay -f tux ; echo
 #doas
 alias sudo="doas"
 
-# directories
+# File managment
 alias ls="exa"
 alias ll="exa -lh"
 alias la="exa -lah"
@@ -55,7 +55,7 @@ alias clr="clear"
 alias ":q"="exit"
 alias play="sh ~/.dotfiles/play.sh"
 alias yt-dl="youtube-dl"
-alias virt="sudo virt-manager"
+alias vim="nvim"
 
 # System
 alias pls="sudo"

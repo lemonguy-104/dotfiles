@@ -15,11 +15,12 @@ call vundle#begin()
 
 " let Vundle manage Vundle, this should go before any other plugin
 Plugin 'VundleVim/Vundle.vim' "https://github.com/VundleVim/Vundle.vim
-
+ 
 " Plugins go down here
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'preservim/nerdtree' "https://github.com/preservim/nerdtree
 Plugin 'mattn/emmet-vim' "https://github.com/mattn/emmet-vim
+"Plugin 'shaeinst/lazy-builder' "https://github.com/shaeinst/lazy-builder
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -76,7 +77,7 @@ set showcmd
 set ruler
 
 "Remaps -> https://vim.fandom.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)
-inoremap <C-z> <C-n> "Maps C-z to do what C-n does, complete
+inoremap <C-z> <C-n><CR> 
 
 "NERDTree
 
@@ -99,7 +100,7 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
     \ quit | endif
 
 "Remaps
-"nnoremap <C-n> :NERDTreeFocus<CR>
+"nnoremap <C-a> :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 
 "Icons
