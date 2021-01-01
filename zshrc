@@ -55,7 +55,7 @@ alias clr="clear"
 alias ":q"="exit"
 alias play="sh ~/.dotfiles/play.sh"
 alias yt-dl="youtube-dl"
-alias vim="nvim"
+#alias vim="nvim"
 
 # System
 alias pls="sudo"
