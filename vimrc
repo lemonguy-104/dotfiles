@@ -19,7 +19,10 @@ Plugin 'VundleVim/Vundle.vim' "https://github.com/VundleVim/Vundle.vim
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'preservim/nerdtree' "https://github.com/preservim/nerdtree
 Plugin 'mattn/emmet-vim' "https://github.com/mattn/emmet-vim
-"Plugin 'shaeinst/lazy-builder' "https://github.com/shaeinst/lazy-builder
+Plugin 'voldikss/vim-floaterm' "https://github.com/voldikss/vim-floaterm
+Plugin 'shaeinst/lazy-builder' "https://github.com/shaeinst/lazy-builder
+Plugin 'vim-airline/vim-airline' "https://github.com/vim-airline/vim-airline
+Plugin 'vim-airline/vim-airline-themes' "https://github.com/vim-airline/vim-airline-themes
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -38,37 +41,41 @@ filetype plugin indent on    " required
 " 
 " =================================
 
+" Leader key
+let mapleader=','
+
 " Encoding
 set encoding=utf-8
 
-"View numbers in the left
+" View numbers in the left
 set number relativenumber
 
-"Set tab size
+" Set tab size
 set softtabstop=4
 
-"Searching
-"Increment the search
+" Searching
+" Increment the search
 set incsearch
-
-"Hightlight the word search (and will also highlight all of them )
-set hlsearch
-
-"Ignore case
+" 
+" Hightlight the word search (and will also highlight all of them )
+" set hlsearch
+"
+" Ignore case
 set ignorecase
 
-    
-
-"Syntax
+" Syntax
 syntax on
 
-"List for compleion (Ctrl+n)
+" List for compleion (Ctrl+n)
 set wildmode=longest,list,full
+
+" Allow backspacing over everything in insert mode
+set backspace=indent,eol,start
 
 " Background dark/light
 " set background=light
 
-" Colorscheme. Can be => default, blue, darkblue, delek, desert, elford, evening, industry, koehler, morning, murphy, pablo, peachpuff, ron, shine, slate, torte, zellner
+" Colorscheme. Can be -> default, blue, darkblue, delek, desert, elford, evening, industry, koehler, morning, murphy, pablo, peachpuff, ron, shine, slate, torte, zellner
 colorscheme peachpuff
 
 " Line in the cursor
@@ -80,34 +87,31 @@ set showcmd
 " See some info in the bottom right
 set ruler
 
-" Allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
-"Remaps -> https://vim.fandom.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)
+" Remaps -> https://vim.fandom.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)
 " When press S replace text
 nnoremap S :%s//g<Left><Left>
 "
-" Compile C/C++ source with F8
-map <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
+" Compile and run C/C++ source with F8
+map <F5> :w <CR> :!gcc % -o %< && ./%< <CR>
 "
 " Run python code with F9
-map <F9> :w <CR> :!python3 % <CR>
+map <F6> :w <CR> :!python3 % <CR>
 
-"NERDTree
-
-"Autostart
+" NERDTree
+" 
+" Autostart
 " Start NERDTree and leave the cursor in it.
-"autocmd VimEnter * NERDTree
+" autocmd VimEnter * NERDTree
 "
 " Start NERDTree and put the cursor back in the other window.
-"auto"cmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree | wincmd p
 "
 " Start NERDTree. If a file is specified, move the cursor to its window.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 "
 " Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * silent NERDTreeMirror
+" autocmd BufWinEnter * silent NERDTreeMirror
 "
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
@@ -117,16 +121,44 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 nnoremap <C-z> :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 
-"Icons
-"Default
-"let g:NERDTreeDirArrowExpandable = '▸'
-"let g:NERDTreeDirArrowCollapsible = '▾'
+" Icons
 "
-"With font awesome (Evidently requires font awesome in the system)
+" Default
+" let g:NERDTreeDirArrowExpandable = '▸'
+" let g:NERDTreeDirArrowCollapsible = '▾'
+"
+" With font awesome (Evidently requires font awesome in the system)
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
 " Emmet
 " Remaps
-let g:user_emmet_mode='n' "Complition will only work in normal mode 
-let g:user_emmet_leader_key=',' "Instead of C+y+, is now ,+,
+let g:manu_emmet_mode='n' "Complition will only work in normal mode 
+let g:manu_emmet_leader_key=',' "Instead of C+y+, is now ,+,
+
+" Lazy builder
+"
+" Run program file when leader+r is pressed
+nnoremap <Leader>r :w <CR><bar> :FloatermNew
+    \ python /home/manu/.vim/lazy-builder/build.py -o /home/manu/.cache/build_files/ -r 1 % <CR><CR>
+"
+" build the program file when leader+b is pressed
+nnoremap <Leader>b :w <CR><bar> :FloatermNew
+    \ time
+    \ python /home/manu/.vim/lazy-builder/build.py -o /home/manu/.cache/build_files/ -b 1 % <CR><CR>
+"    
+" build and then run the program when leader+o is pressed
+nnoremap <Leader>o :w <CR><bar> :FloatermNew
+    \ time
+    \ python /home/manu/.vim/lazy-builder/build.py -o /home/manu/.cache/build_files/ -br 1 % <CR><CR>
+
+"Vim airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+"let g:airline_theme='base16_google'
+let g:airline_theme='wombat'
+"let g:airline_statusline_ontop=1
+
+" FloatTerm
+"
+nnoremap   <silent>   <F7>    :FloatermNew<CR>

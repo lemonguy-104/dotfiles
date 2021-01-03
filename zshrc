@@ -26,8 +26,8 @@ zstyle ':completion::complete:*' gain-privileges 1 # For running with sudo
 #The fuck (https://github.com/nvbn/thefuck)
 eval $(thefuck --alias)
 
-#Cowsay saying a somithing from fortune cokkie when open a terminal (Requieres cowsay and fortune)
-fortune | cowsay -f tux ; echo 
+#Cowsay saying a something from fortune cokkie when open a terminal (Requieres cowsay and fortune)
+fortune | cowsay -f tux | tee -a ~/.fortune ; echo
 
 # Alias\
 
@@ -55,6 +55,7 @@ alias clr="clear"
 alias ":q"="exit"
 alias play="sh ~/.dotfiles/play.sh"
 alias yt-dl="youtube-dl"
+alias svim='sudo vim'
 #alias vim="nvim"
 
 # System
