@@ -20,7 +20,7 @@ Plugin 'VundleVim/Vundle.vim' "https://github.com/VundleVim/Vundle.vim
 Plugin 'preservim/nerdtree' "https://github.com/preservim/nerdtree
 Plugin 'mattn/emmet-vim' "https://github.com/mattn/emmet-vim
 Plugin 'voldikss/vim-floaterm' "https://github.com/voldikss/vim-floaterm
-Plugin 'shaeinst/lazy-builder' "https://github.com/shaeinst/lazy-builder
+"Plugin 'shaeinst/lazy-builder' "https://github.com/shaeinst/lazy-builder
 Plugin 'vim-airline/vim-airline' "https://github.com/vim-airline/vim-airline
 Plugin 'vim-airline/vim-airline-themes' "https://github.com/vim-airline/vim-airline-themes
 " All of your Plugins must be added before the following line
@@ -92,10 +92,10 @@ set ruler
 nnoremap S :%s//g<Left><Left>
 "
 " Compile and run C/C++ source with F8
-map <F5> :w <CR> :!gcc % -o %< && ./%< <CR>
+map <leader>c :w <CR> :!clear ; gcc % -o %< ; ./%< <CR>
 "
 " Run python code with F9
-map <F6> :w <CR> :!python3 % <CR>
+map <leader>r :w <CR> :!clear ; python3 % <CR>
 
 " NERDTree
 " 
@@ -139,18 +139,18 @@ let g:manu_emmet_leader_key=',' "Instead of C+y+, is now ,+,
 " Lazy builder
 "
 " Run program file when leader+r is pressed
-nnoremap <Leader>r :w <CR><bar> :FloatermNew
-    \ python /home/manu/.vim/lazy-builder/build.py -o /home/manu/.cache/build_files/ -r 1 % <CR><CR>
+"nnoremap <Leader>r :w <CR><bar> :FloatermNew
+"    \ python /home/manu/.vim/lazy-builder/build.py -o /home/manu/.cache/build_files/ -r 1 % <CR><CR>
 "
 " build the program file when leader+b is pressed
-nnoremap <Leader>b :w <CR><bar> :FloatermNew
-    \ time
-    \ python /home/manu/.vim/lazy-builder/build.py -o /home/manu/.cache/build_files/ -b 1 % <CR><CR>
+"nnoremap <Leader>b :w <CR><bar> :FloatermNew
+"    \ time
+"    \ python /home/manu/.vim/lazy-builder/build.py -o /home/manu/.cache/build_files/ -b 1 % <CR><CR>
 "    
 " build and then run the program when leader+o is pressed
-nnoremap <Leader>o :w <CR><bar> :FloatermNew
-    \ time
-    \ python /home/manu/.vim/lazy-builder/build.py -o /home/manu/.cache/build_files/ -br 1 % <CR><CR>
+"nnoremap <Leader>o :w <CR><bar> :FloatermNew
+"    \ time
+"    \ python /home/manu/.vim/lazy-builder/build.py -o /home/manu/.cache/build_files/ -br 1 % <CR><CR>
 
 "Vim airline
 let g:airline#extensions#tabline#enabled = 1

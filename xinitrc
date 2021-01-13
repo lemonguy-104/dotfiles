@@ -8,3 +8,4 @@ bash ~/.dotfiles/dwm_start.sh
 
 #Start Xorg server
 exec dwm
+#exec qtile

@@ -27,7 +27,7 @@ zstyle ':completion::complete:*' gain-privileges 1 # For running with sudo
 eval $(thefuck --alias)
 
 #Cowsay saying a something from fortune cokkie when open a terminal (Requieres cowsay and fortune)
-fortune | cowsay -f tux | tee -a ~/.fortune ; echo
+#fortune | cowsay -f tux | tee -a ~/.fortune ; echo
 
 # Alias\
 
@@ -53,6 +53,7 @@ alias go-dwm="cd /home/manu/suckless/dwm/"
 alias LG='xmodmap -e "keycode 62 = less greater"'
 alias clr="clear"
 alias ":q"="exit"
+alias ':Q'=':q'
 alias play="sh ~/.dotfiles/play.sh"
 alias yt-dl="youtube-dl"
 alias svim='sudo vim'
