@@ -72,12 +72,6 @@ set wildmode=longest,list,full
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" Background dark/light
-" set background=light
-
-" Colorscheme. Can be -> default, blue, darkblue, delek, desert, elford, evening, industry, koehler, morning, murphy, pablo, peachpuff, ron, shine, slate, torte, zellner
-colorscheme peachpuff
-
 " Line in the cursor
 set cursorline
 
@@ -87,15 +81,32 @@ set showcmd
 " See some info in the bottom right
 set ruler
 
+" Auto complete (), {}, []
+inoremap ( ()<Left>
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap < <><Left>
+inoremap ' ''<Left>
+inoremap " ""<Left>
+
+" Background dark/light
+" set background=light
+
+" Colorscheme. Can be -> default, blue, darkblue, delek, desert, elford, evening, industry, koehler, morning, murphy, pablo, peachpuff, ron, shine, slate, torte, zellner
+colorscheme peachpuff
+
 " Remaps -> https://vim.fandom.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)
 " When press S replace text
 nnoremap S :%s//g<Left><Left>
 "
-" Compile and run C/C++ source with F8
+" Compile and run C/C++ source
 map <leader>c :w <CR> :!clear ; gcc % -o %< ; ./%< <CR>
 "
-" Run python code with F9
+" Run python code
 map <leader>r :w <CR> :!clear ; python3 % <CR>
+"
+" Run bash script
+map <leader>b :w <CR> :!clear ; ./% <CR>
 
 " NERDTree
 " 
