@@ -1,13 +1,13 @@
-#~/.dotfiles/xinitrc -> ~/.xinitrc
+# For starting Xorg with startx 
 
-# Start dunst
-systemctl --user import-environment DISPLAY # Uncomment if notifications arent working
+#Run the autostart script
+bash ~/.dotfiles/dwm_start &
+
+# Start twmnd
+twmnd & # https://github.com/sboli/twmn
 
 # Hide mouse after 3 seconds of inactivity
 unclutter -idle 3 &
-
-#Run the autostart script
-bash ~/.dotfiles/dwm_start.sh
 
 #Start Xorg server
 exec dwm

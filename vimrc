@@ -81,13 +81,20 @@ set showcmd
 " See some info in the bottom right
 set ruler
 
-" Auto complete (), {}, []
+" Auto complete (), {}, [], etc
 inoremap ( ()<Left>
 inoremap { {}<Left>
 inoremap [ []<Left>
 inoremap < <><Left>
 inoremap ' ''<Left>
 inoremap " ""<Left>
+inoremap ` ``<Left>
+"
+inoremap ) ()
+inoremap } {}
+inoremap ] []
+inoremap > <>
+
 
 " Background dark/light
 " set background=light
@@ -106,7 +113,7 @@ map <leader>c :w <CR> :!clear ; gcc % -o %< ; ./%< <CR>
 map <leader>r :w <CR> :!clear ; python3 % <CR>
 "
 " Run bash script
-map <leader>b :w <CR> :!clear ; ./% <CR>
+map <leader>m :w <CR> :!clear ; ./% <CR>
 
 " NERDTree
 " 

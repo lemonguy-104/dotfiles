@@ -54,7 +54,7 @@ alias LG='xmodmap -e "keycode 62 = less greater"'
 alias clr="clear"
 alias ":q"="exit"
 alias ':Q'=':q'
-alias play="sh ~/.dotfiles/play.sh"
+alias play="sh ~/.dotfiles/play"
 alias yt-dl="youtube-dl"
 alias svim='sudo vim'
 #alias vim="nvim"
