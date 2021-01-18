@@ -39,9 +39,9 @@ alias ls="exa"
 alias ll="exa -lh"
 alias la="exa -lah"
 #alias ls='ls --color=auto'
-alias sl='ls'
-alias s='ls'
-alias l='ls'
+alias sl='sl' # hehehe
+alias s='sl'
+alias l='sl'
 alias mkd="mkdir -pv"
 alias rm="rm -v"
 alias mv"mv -v"
