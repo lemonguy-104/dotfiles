@@ -1,6 +1,8 @@
-# ~/.rc/zshrc
+# ~/.zshrc
 # Good guides -> https://wiki.archlinux.org/index.php/Zsh
 #	      -> https://wiki.gentoo.org/wiki/Zsh/Guide
+
+export EDITOR=vim
 
 # History
 HISTSIZE=1000
@@ -11,7 +13,7 @@ HISTFILE=~/.zsh_histfile
 #PS1='%F{magenta}%n%f@%F{blue}%m%f%F{yellow}%B%~%b%f $ '
 #PS1="[%F{magenta}%n%f @%  %F{blue}%M%f %F{yellow}%~%f]> "
 #PS1="%F{yellow}[%f %F{magenta}%n%f %F{green}@%f %F{blue}%M%f %F{green}%~%f %F{yellow}]%f %F{green}>%f "
-PS1="%F{red}[%f%F{yellow}%n%f%F{cyan}@%f%F{green}%M%f%F{cyan}%~%f%F{red}]%f%F{cyan}>%f "
+PS1="%F{red}[%f%F{yellow}%n%f%F{cyan}@%f%F{green}%M%f %F{cyan}%~%f%F{red}]%f%F{cyan}>%f "
 
 # Configurations
 unsetopt beep #beeps when errors
@@ -22,9 +24,6 @@ compinit # Base completation
 zstyle ':completion:*' menu select # Select on the menu
 setopt COMPLETE_ALIASES # Aliases completation
 zstyle ':completion::complete:*' gain-privileges 1 # For running with sudo
-
-#The fuck (https://github.com/nvbn/thefuck)
-eval $(thefuck --alias)
 
 #Cowsay saying a something from fortune cokkie when open a terminal (Requieres cowsay and fortune)
 #fortune | cowsay -f tux | tee -a ~/.fortune ; echo
@@ -39,9 +38,10 @@ alias ls="exa"
 alias ll="exa -lh"
 alias la="exa -lah"
 #alias ls='ls --color=auto'
-alias sl='sl' # hehehe
-alias s='sl'
-alias l='sl'
+#alias sl='sl' # hehehe
+alias sl='ls'
+alias s='ls'
+alias l='ls'
 alias mkd="mkdir -pv"
 alias rm="rm -v"
 alias mv"mv -v"
@@ -81,3 +81,6 @@ alias nf1="neofetch | lolcat -a -s 500"
 alias pf="pfetch | lolcat"
 alias pf1="pfetch | lolcat -a -s 500"
 
+
+#The fuck (https://github.com/nvbn/thefuck)
+eval $(thefuck --alias)

@@ -31,6 +31,3 @@ while true; do
     xsetroot -name "| $(cpu) | $(memo) | $(datt) |  |"
     sleep 1s #Update time
 done &
-
-#Wallpaper
-nitrogen --restore &

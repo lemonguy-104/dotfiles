@@ -1,0 +1,57 @@
+! ~/.Xrersources
+
+!! Colorscheme
+!special
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
+
+! black
+*.color0:       #1d1f21
+*.color8:       #969896
+
+! red
+*.color1:       #cc342b
+*.color9:       #cc342b
+
+! green
+*.color2:       #198844
+*.color10:      #198844
+
+! yellow
+*.color3:       #fba922
+*.color14:      #fba922
+
+! blue
+*.color4:       #3971ed
+*.color12:      #3971ed
+
+! magenta
+*.color5:       #a36ac7
+*.color13:      #a36ac7
+
+! cyan
+*.color6:       #3971ed
+*.color11:      #3971ed
+
+! white
+*.color7:       #c5c8c6
+*.color15:      #ffffff
+
+!! URxvt Appearance
+URxvt.font: xft:mononoki Nerd Font:style=Regular:size=11.5
+URxvt.boldFont: xft:mononoki Nerd Font:style=Bold:size=11.5
+URxvt.italicFont: xft:mononoki Nerd Font:style=Italic:size=11.5
+URxvt.boldItalicfont: xft:mononoki Nerd Font:style=Bold Italic:size=11.5
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 92x24
+URxvt.internalBorder: 4
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+URxvt.iso14755: false
