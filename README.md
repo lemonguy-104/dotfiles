@@ -12,3 +12,5 @@ stow * (to symlink all of the)
 # Symlink only one, in this case, Xresources
 stow Xresources
 ```
+
+Disclamer: something may look weird, like Xresources, because it uses Mononoki Nerd Font and it needs to be installed.
