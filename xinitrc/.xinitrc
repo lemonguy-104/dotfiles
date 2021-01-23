@@ -1,7 +1,7 @@
 # For starting Xorg with startx 
 
 #Run the autostart script
-bash ~/.dotfiles/dwm_start &
+bash ~/.dwm/dwm/dwm_bar &
 
 #Wallpaper
 nitrogen --restore &
