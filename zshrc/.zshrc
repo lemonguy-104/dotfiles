@@ -58,6 +58,7 @@ alias play="sh ~/.dotfiles/play"
 alias yt-dl="youtube-dl"
 alias svim='sudo vim'
 #alias vim="nvim"
+alias play="mpv -fs $1 & disown"
 
 # System
 alias pls="sudo"
