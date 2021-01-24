@@ -61,17 +61,21 @@ URxvt.depth: 24
 URxvt.iso14755: false
 
 !! URxvt Functions
-URxvt.perl-ext-common: resize-font,selection-to-clipboard,pasta
+URxvt.perl-ext-common: resize-font,selection-to-clipboard,pasta,default,matcher
 !
-! Change fonts on the fly > https://github.com/simmel/urxvt-resize-font
+! Change fonts on the fly > https://github.com/simmel/urxvt-resize-font (resize-font)
 URxvt.keysym.C-minus: resize-font:smaller
 URxvt.keysym.C-plus: resize-font:bigger
 URxvt.keysym.C-equal: resize-font:reset
 URxvt.keysym.C-question: resize-font:show
 !
-! Copy and paste > https://github.com/MentalOutlaw/deploygentoo/blob/master/rice/dots/pasta 
+! Copy and paste > https://github.com/MentalOutlaw/deploygentoo/blob/master/rice/dots/pasta (selection-to-clipboard,pasta)
 ! You can also use the mouse by highlighting and then clicking the middle button. More info > https://en.wikipedia.org/wiki/Cut,_copy,_and_paste#Common_keyboard_shortcuts (See 'X Window System')
 URxvt.keysym.Shift-Control-C: perl:keyboard-select:activate
 URxvt.keysym.Shift-Control-V: perl:pasta:paste
 ! Comment this if you dont want copy when text is selected
 URxvt.clipboard.autocopy: true
+!
+! Clickeable links (default,matcher)
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1

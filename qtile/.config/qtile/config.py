@@ -59,8 +59,8 @@ keys = [
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
     # multiple stack panes
-    Key([mod, "shift"], "Return", lazy.layout.toggle_split(),
-        desc="Toggle between split and unsplit sides of stack"),
+    #Key([mod, "shift"], "Return", lazy.layout.toggle_split(),
+    #    desc="Toggle between split and unsplit sides of stack"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
 
     # Toggle between different layouts as defined below
@@ -68,9 +68,9 @@ keys = [
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
 
     Key([mod, "control"], "r", lazy.restart(), desc="Restart qtile"),
-    Key([mod, "control"], "c", lazy.shutdown(), desc="Shutdown qtile"),
+    Key([mod, "shift"], "c", lazy.shutdown(), desc="Shutdown qtile"),
     #Key([mod], "r", lazy.spawncmd(),
-    Key([mod], "r", lazy.spawncmd(),
+    Key([mod, "shift"], "Return", lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"),
 
     # MonadTall
@@ -129,15 +129,15 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='sans',
-    fontsize=12,
+    font='Mononoki Nerd Font',
+    fontsize=16,
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        bottom=bar.Bar(
+        top=bar.Bar(
             [
                 widget.CurrentLayout(),
                 widget.GroupBox(),
@@ -149,11 +149,9 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
                 widget.Systray(),
+                #widget.Net(interface="eno1"),
                 widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
-                widget.QuickExit(),
             ],
             24,
         ),
