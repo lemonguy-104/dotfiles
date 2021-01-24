@@ -2,6 +2,10 @@
 # Good guides -> https://wiki.archlinux.org/index.php/Zsh
 #	      -> https://wiki.gentoo.org/wiki/Zsh/Guide
 
+if [ -f /etc/bash.command-not-found ]; then # if [ -f /etc/bash.command-not-found ]; then
+    . /etc/bash.command-not-found
+fi
+
 export EDITOR=vim
 
 # History
