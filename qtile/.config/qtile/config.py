@@ -85,7 +85,7 @@ keys = [
 
 groups = []
 group_names = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0",]
-group_labels = ["", "", "", "", "", "", "", "", "", "/",] # Other unicode icons >  爵    
+group_labels = ["| |", "| |", "| |", "| |", "| |", "| |", "| |", "| |", "| |", "|/ |",] # Other unicode icons >  爵    
 group_layouts = ["monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall",]
 
 for i in range(len(group_names)):
@@ -131,7 +131,7 @@ layouts = [
 widget_defaults = dict(
     font='Mononoki Nerd Font',
     fontsize=16,
-    padding=3,
+    padding=1,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -139,10 +139,12 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
+                widget.GroupBox(highlight_method='block', block_highlight_text_color='3971ED', disable_drag=True),
+                widget.TextBox(text=' | '),
                 widget.Prompt(),
-                widget.WindowName(),
+                widget.TextBox(text=' | '),
+                widget.WindowName(background='3971ED'),
+                widget.TextBox(text=' | '),
                 widget.Chord(
                     chords_colors={
                         'launch': ("#ff0000", "#ffffff"),
@@ -151,6 +153,9 @@ screens = [
                 ),
                 widget.Systray(),
                 #widget.Net(interface="eno1"),
+                widget.TextBox(text=' | '),
+                widget.CurrentLayout(),
+                widget.TextBox(text=' | '),
                 widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
             ],
             24,

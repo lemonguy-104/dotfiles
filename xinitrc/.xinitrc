@@ -1,7 +1,7 @@
 # For starting Xorg with startx 
 
 #Run the autostart script
-#bash ~/.dwm/dwm/dwm_bar &
+bash ~/.dwm/dwm/dwm_bar &
 
 #Wallpaper
 nitrogen --restore &
@@ -16,5 +16,5 @@ unclutter -idle 3 &
 xrdb ~/.Xresources
 
 #Start Xorg server
-exec qtile
-#exec dwm
+exec dwm
+#exec qtile
