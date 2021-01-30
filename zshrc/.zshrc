@@ -57,8 +57,6 @@ alias mv"mv -v"
 alias cp"cp -v"
 
 # utilities
-alias tlauncher="java -jar ~/mc/TLauncher-2.72.jar"
-alias go-dwm="cd /home/manu/suckless/dwm/"
 alias LG='xmodmap -e "keycode 62 = less greater"'
 alias clr="clear"
 alias ":q"="exit"

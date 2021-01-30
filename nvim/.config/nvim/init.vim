@@ -19,8 +19,6 @@ Plugin 'VundleVim/Vundle.vim' "https://github.com/VundleVim/Vundle.vim
 " Keep Plugin commands between vundle#begin/end.
 "Plugin 'preservim/nerdtree' "https://github.com/preservim/nerdtree
 Plugin 'mattn/emmet-vim' "https://github.com/mattn/emmet-vim
-"Plugin 'voldikss/vim-floaterm' "https://github.com/voldikss/vim-floaterm
-"Plugin 'shaeinst/lazy-builder' "https://github.com/shaeinst/lazy-builder
 Plugin 'vim-airline/vim-airline' "https://github.com/vim-airline/vim-airline
 Plugin 'vim-airline/vim-airline-themes' "https://github.com/vim-airline/vim-airline-themes
 
