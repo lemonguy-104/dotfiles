@@ -5,7 +5,7 @@
 # Vi mode
 bindkey -v
 
-if [ -f /etc/bash.command-not-found ]; then
+if [ -f /etc/bash.command-not-found ]; then # https://gitlab.com/dwt1/bash-insulter
     . /etc/bash.command-not-found
 fi
 

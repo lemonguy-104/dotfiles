@@ -58,7 +58,7 @@ set softtabstop=4
 set incsearch
  
 " Hightlight the word search (and will also highlight all of them )
-" set hlsearch
+set hlsearch!
 
 " Ignore case
 set ignorecase
@@ -84,6 +84,8 @@ set showcmd
 " See some info in the bottom right
 set ruler
 
+" Open the config file
+nnoremap <leader>n :tabe $HOME/.config/nvim/init.vim <CR>
 
 " -- Auto complete (), {}, [], etc---
 
@@ -118,10 +120,10 @@ nnoremap S :%s//g<Left><Left>
 map <leader>c :w <CR> :!clear ; gcc % -o %< ; ./%< <CR>
 
 " Run python code
-map <leader>r :w <CR> :!clear ; python3 % <CR>
+map <leader>p :w <CR> :!clear ; python3 % <CR>
 
 " Run bash script
-map <leader>m :w <CR> :!clear ; ./% <CR>
+map <leader>b :w <CR> :!clear ; ./% <CR>
 
 
 " --Plugins configuration--
@@ -135,5 +137,5 @@ let g:manu_emmet_leader_key=',' "Instead of C+y+, is now ,+,
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 "let g:airline_theme='base16_google'
-let g:airline_theme='wombat'
+let g:airline_theme='onedark'
 "let g:airline_statusline_ontop=1
