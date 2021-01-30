@@ -1,12 +1,17 @@
-# ~/.zshrc
+# zshRC
 # Good guides -> https://wiki.archlinux.org/index.php/Zsh
 #	      -> https://wiki.gentoo.org/wiki/Zsh/Guide
 
-if [ -f /etc/bash.command-not-found ]; then # if [ -f /etc/bash.command-not-found ]; then
+# Vi mode
+bindkey -v
+
+if [ -f /etc/bash.command-not-found ]; then
     . /etc/bash.command-not-found
 fi
 
 export EDITOR=vim
+export BROWSER=librewolf
+export TERM=rxvt-unicode-256color
 
 # History
 HISTSIZE=1000
@@ -47,7 +52,7 @@ alias sl='ls'
 alias s='ls'
 alias l='ls'
 alias mkd="mkdir -pv"
-alias rm="rm -v"
+alias rm="rm -rfv"
 alias mv"mv -v"
 alias cp"cp -v"
 
@@ -58,11 +63,10 @@ alias LG='xmodmap -e "keycode 62 = less greater"'
 alias clr="clear"
 alias ":q"="exit"
 alias ':Q'=':q'
-alias play="sh ~/.dotfiles/play"
 alias yt-dl="youtube-dl"
 alias svim='sudo vim'
-#alias vim="nvim"
-alias play="mpv -fs $1 & disown"
+alias vim="nvim"
+alias play="mpv --fs $1 & disown"
 
 # System
 alias pls="sudo"
@@ -88,4 +92,4 @@ alias pf1="pfetch | lolcat -a -s 500"
 
 
 #The fuck (https://github.com/nvbn/thefuck)
-eval $(thefuck --alias)
+#eval $(thefuck --alias)
