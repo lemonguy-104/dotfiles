@@ -1,0 +1,15 @@
+[submodule "nvim/.config/nvim/bundle/Vundle.vim"]
+	path = nvim/.config/nvim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim/
+[submodule "nvim/.config/nvim/nerdtree"]
+	path = nvim/.config/nvim/nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule "nvim/.config/nvim/emmet-vim"]
+	path = nvim/.config/nvim/emmet-vim
+	url = https://github.com/mattn/emmet-vim
+[submodule "nvim/.config/nvim/vim-airline"]
+	path = nvim/.config/nvim/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "nvim/.config/nvim/vim-airline-themes"]
+	path = nvim/.config/nvim/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
