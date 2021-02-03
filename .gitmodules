@@ -7,3 +7,6 @@
 [submodule "nvim/.config/nvim/emmet-vim"]
 	path = nvim/.config/nvim/emmet-vim
 	url = https://github.com/mattn/emmet-vim
+[submodule "nvim/.config/nvim/lightline.vim"]
+	path = nvim/.config/nvim/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
