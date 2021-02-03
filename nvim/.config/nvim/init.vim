@@ -18,9 +18,10 @@ Plugin 'VundleVim/Vundle.vim' "https://github.com/VundleVim/Vundle.vim
 " Plugins go down here
 " Keep Plugin commands between vundle#begin/end.
 "Plugin 'preservim/nerdtree' "https://github.com/preservim/nerdtree
-Plugin 'mattn/emmet-vim' "https://github.com/mattn/emmet-vim
-Plugin 'vim-airline/vim-airline' "https://github.com/vim-airline/vim-airline
-Plugin 'vim-airline/vim-airline-themes' "https://github.com/vim-airline/vim-airline-themes
+"Plugin 'mattn/emmet-vim' "https://github.com/mattn/emmet-vim
+"Plugin 'vim-airline/vim-airline' "https://github.com/vim-airline/vim-airline
+"Plugin 'vim-airline/vim-airline-themes' "https://github.com/vim-airline/vim-airline-themes
+Plugin 'itchyny/lightline.vim' "https://github.com/itchyny/lightline.vim
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,7 +51,10 @@ set encoding=utf-8
 set number relativenumber
 
 " Set tab size
+set tabstop=4
 set softtabstop=4
+set shiftwidth=4
+set expandtab
 
 " Increment the search
 set incsearch
@@ -81,6 +85,12 @@ set showcmd
 
 " See some info in the bottom right
 set ruler
+
+" Needed for lightline plugin
+set laststatus=2
+
+" Dont show -- INSERT --
+set noshowmode
 
 " Open the config file
 nnoremap <leader>n :tabe $HOME/.config/nvim/init.vim <CR>
@@ -132,8 +142,13 @@ let g:manu_emmet_mode='n' "Complition will only work in normal mode
 let g:manu_emmet_leader_key=',' "Instead of C+y+, is now ,+,
 
 "Vim airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#formatter = 'unique_tail'
 "let g:airline_theme='base16_google'
-let g:airline_theme='onedark'
+" let g:airline_theme='onedark'
 "let g:airline_statusline_ontop=1
+
+" Lightline (:h g:lightline.colorscheme)
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }

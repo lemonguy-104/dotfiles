@@ -1,13 +1,10 @@
 # For starting Xorg with startx 
 
 #Run the autostart script
-bash ~/.dwm/dwm/dwm_bar &
+bash ~/.config/dwm/dwm_bar &
 
 #Wallpaper
 nitrogen --restore &
-
-# Start twmnd
-twmnd & # https://github.com/sboli/twmn
 
 # Hide mouse after 3 seconds of inactivity
 unclutter -idle 3 &
