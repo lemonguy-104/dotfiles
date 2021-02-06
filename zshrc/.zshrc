@@ -9,7 +9,7 @@ if [ -f /etc/bash.command-not-found ]; then # https://gitlab.com/dwt1/bash-insul
     . /etc/bash.command-not-found
 fi
 
-export EDITOR=vim
+export EDITOR=nvim
 export BROWSER=librewolf
 export TERM=rxvt-unicode-256color
 
