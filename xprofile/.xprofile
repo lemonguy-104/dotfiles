@@ -1,4 +1,4 @@
-# Start Xorg with startx (use only for my dwm build)
+# Same thing as .xinitrc but used when a login manager is used (use only for my dwm build)
 
 # Run the bar script
 bash ~/.config/dwm/dwm_bar &
@@ -11,7 +11,3 @@ unclutter -idle 3 &
 
 # Xresources for urxvt
 xrdb ~/.Xresources
-
-# Start Xorg server
-exec dwm
-#exec qtile
