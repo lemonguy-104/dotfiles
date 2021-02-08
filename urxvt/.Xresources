@@ -5,7 +5,6 @@
 ! Coloschemes > https://terminal.sexy/
 
 !! Colorscheme
-!special
 *.foreground:   #c5c8c6
 *.background:   #1d1f21
 *.cursorColor:  #c5c8c6
@@ -46,7 +45,7 @@
 URxvt.font: xft:mononoki Nerd Font:style=Regular:size=11.5
 URxvt.boldFont: xft:mononoki Nerd Font:style=Bold:size=11.5
 URxvt.italicFont: xft:mononoki Nerd Font:style=Italic:size=11.5
-URxvt.boldItalicfont: xft:mononoki Nerd Font:style=Bold Italic:size=11.5
+URxvt.boldItalicFont: xft:mononoki Nerd Font:style=Bold Italic:size=11.5
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 92x24

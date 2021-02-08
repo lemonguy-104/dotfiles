@@ -64,7 +64,8 @@ alias ':Q'=':q'
 alias yt-dl="youtube-dl"
 alias svim='sudo vim'
 alias vim="nvim"
-alias play="mpv --fs $1 & disown"
+alias play="mpv --fs "$1" & disown"
+alias pdf="zathura "$1""
 
 # System
 alias pls="sudo"
@@ -83,11 +84,11 @@ alias myip="curl https://ipinfo.io/ip"
 
 # random
 alias noToques="clear && cowsay 'NO TOQUES MI ORDENDOR >:u' && echo"
+alias neofetch="neofetch --w3m ~/L/meme/arch.png"
 alias nf="neofetch | lolcat"
 alias nf1="neofetch | lolcat -a -s 500"
 alias pf="pfetch | lolcat"
 alias pf1="pfetch | lolcat -a -s 500"
-
 
 #The fuck (https://github.com/nvbn/thefuck)
 #eval $(thefuck --alias)
