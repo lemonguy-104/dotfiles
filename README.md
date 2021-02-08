@@ -4,7 +4,7 @@ How to:
 ```bash
 # Get my dotfiles.
 cd ~
-git clone https://github.com/lemonguy-104/dotfiles
+git clone --recurse-submodules https://github.com/lemonguy-104/dotfiles.git
 cd dotfiles
 
 # Symlink all of them.
