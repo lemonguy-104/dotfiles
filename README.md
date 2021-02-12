@@ -7,11 +7,11 @@ cd ~
 git clone --recurse-submodules https://github.com/lemonguy-104/dotfiles.git
 cd dotfiles
 
-# Symlink all of them.
+# Symlink all of them. README.md and TODO needs to be deleted to symlink all.
 stow *
 
 # Symlink only one, in this case, Xresources.
 stow urxvt
 ```
 
-Disclamer: something may look weird, like Xresources, because it uses Mononoki Nerd Font and it needs to be installed to look as ot should.
+Disclamer: some things may look weird, like urxvt, because it uses Mononoki Nerd Font and it needs to be installed to look as it should.
