@@ -1,7 +1,7 @@
 # Start Xorg with startx (use only for my dwm build)
 
-# Run the bar script
-bash ~/.config/dwm/dwm_bar &
+# Start slstatus
+slstatus &
 
 # Wallpaper
 nitrogen --restore &

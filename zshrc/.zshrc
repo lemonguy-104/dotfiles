@@ -1,6 +1,8 @@
 # zshRC
-# Good guides -> https://wiki.archlinux.org/index.php/Zsh
-#	      -> https://wiki.gentoo.org/wiki/Zsh/Guide
+
+# Good guides ->
+# -> https://wiki.archlinux.org/index.php/Zsh
+# -> https://wiki.gentoo.org/wiki/Zsh/Guide
 
 # Vi mode
 bindkey -v
@@ -37,7 +39,7 @@ zstyle ':completion::complete:*' gain-privileges 1 # For running with sudo
 #Cowsay saying a something from fortune cokkie when open a terminal (Requieres cowsay and fortune)
 #fortune | cowsay -f tux | tee -a ~/.fortune ; echo
 
-# Alias\
+# Alias
 
 #doas
 alias sudo="doas"

@@ -1,7 +1,7 @@
 # Same thing as .xinitrc but used when a login manager is used (use only for my dwm build)
 
 # Run the bar script
-bash ~/.config/dwm/dwm_bar &
+slstatus &
 
 # Wallpaper
 nitrogen --restore &
