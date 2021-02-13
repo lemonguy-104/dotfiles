@@ -10,7 +10,7 @@ cd dotfiles
 # Symlink all of them. README.md and TODO needs to be deleted to symlink all.
 stow *
 
-# Symlink only one, in this case, Xresources.
+# Symlink only one, in this case, urxvt.
 stow urxvt
 ```
 
