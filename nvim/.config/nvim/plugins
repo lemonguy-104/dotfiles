@@ -14,10 +14,6 @@ function plugs {
 		git clone https://github.com/VundleVim/Vundle.vim/
 		cd ../
 
-		git clone https://github.com/preservim/nerdtree
-
-		git clone https://github.com/mattn/emmet-vim
-
         git clone https://github.com/itchyny/lightline.vim
 
 		echo "nvim +PluginInstall +qall"
@@ -45,7 +41,7 @@ else
 	echo
 
 	if [[ $redownload == "yes" ]]; then
-		rm -rf bundle nerdtree emmet-vim vim-airline*
+		rm -rf bundle lightline.vim
 		$(plugs)
 	else
 		echo "Exiting..." && echo && exit 1

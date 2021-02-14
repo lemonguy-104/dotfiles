@@ -25,8 +25,10 @@ HISTFILE=~/.zsh_histfile
 #PS1="[%F{magenta}%n%f @%  %F{blue}%M%f %F{yellow}%~%f]> "
 #PS1="%F{yellow}[%f %F{magenta}%n%f %F{green}@%f %F{blue}%M%f %F{green}%~%f %F{yellow}]%f %F{green}>%f "
 
-PS1="%F{red}[%f%F{yellow}%n%f%F{cyan}@%f%F{green}%M%f %F{cyan}%~%f%F{red}]%f%F{cyan}>%f "
 #PS1="%F{cyan}%~%f %F{green}>%f "
+PS1="%F{red}[%f%F{yellow}%n%f%F{cyan}@%f%F{green}%M%f %F{cyan}%~%f%F{red}]%f%F{cyan}>%f "
+#PS1="%F{red}[%f%F{yellow}%n%f%F{cyan}@%f%F{green}%M%f %F{cyan}%~%f%F{red}]%f
+#%F{cyan}>%f "
 
 # Configurations
 unsetopt beep #beeps when errors
@@ -96,3 +98,4 @@ alias pf1="pfetch | lolcat -a -s 500"
 
 #The fuck (https://github.com/nvbn/thefuck)
 #eval $(thefuck --alias)
+

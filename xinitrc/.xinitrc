@@ -1,6 +1,6 @@
 # Start Xorg with startx (use only for my dwm build)
 
-# Start slstatus
+# Start the status bar
 slstatus &
 
 # Wallpaper
