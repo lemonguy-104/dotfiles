@@ -70,8 +70,8 @@ alias ':Q'=':q'
 alias yt-dl="youtube-dl"
 alias svim='sudo vim'
 alias vim="nvim"
-alias play="mpv --fs "$1" & disown"
-alias pdf="zathura "$1""
+alias play="mpv --fs"
+alias pdf="zathura"
 
 # System
 alias pls="sudo"
