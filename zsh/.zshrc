@@ -1,4 +1,4 @@
-# zshRC
+#!/bin/zsh
 
 # Good guides ->
 # -> https://wiki.archlinux.org/index.php/Zsh
@@ -29,8 +29,10 @@ HISTFILE=~/.zsh_histfile
 #PS1="%F{red}[%f%F{yellow}%n%f%F{cyan}@%f%F{green}%M%f %F{cyan}%~%f%F{red}]%f
 #%F{cyan}>%f "
 
-PS1="%F{cyan}[ %f%F{green}%T%f%F{cyan} ]%f %F{cyan}[ %f%F{green}%M%f%F{cyan} ]%f
-%F{cyan}%~%f %F{green}>%f%F{cyan>%f "
+#PS1="%F{cyan}[ %f%F{green}%T%f%F{cyan} ]%f %F{cyan}[ %f%F{green}%M%f%F{cyan} ]%f
+#%F{cyan}%~%f %F{green}>%f%F{cyan>%f "
+
+PS1="%F{cyan}[ %f%F{green}%~%f%F{cyan} ]%f %F{red}>%f%F{cyan}>%f%F{green}>%f "
 
 #PS1='%F{magenta}%n%f@%F{blue}%m%f%F{yellow}%B%~%b%f $ '
 #PS1="[%F{magenta}%n%f @%  %F{blue}%M%f %F{yellow}%~%f]> "
@@ -44,7 +46,7 @@ autoload -Uz compinit promptinit # Base completation
 compinit # Base completation
 zstyle ':completion:*' menu select # Select on the menu
 setopt COMPLETE_ALIASES # Aliases completation
-zstyle ':completion::complete:*' gain-privileges 1 # For running with sudo
+zstyle ':completion::complete:*' gain-privileges 1 # For running with sudo/doas
 
 #Cowsay saying a something from fortune cokkie when open a terminal (Requieres cowsay and fortune)
 #fortune | cowsay -f tux ; echo
