@@ -3,6 +3,7 @@
 # Good guides ->
 # -> https://wiki.archlinux.org/index.php/Zsh
 # -> https://wiki.gentoo.org/wiki/Zsh/Guide
+# -> man zshmisc
 
 # Vi mode
 bindkey -v
@@ -21,14 +22,19 @@ SAVEHIST=1000
 HISTFILE=~/.zsh_histfile
 
 # PS1
+#PS1="%F{cyan}%~%f %F{green}>%f "
+
+#PS1="%F{red}[%f%F{yellow}%n%f%F{cyan}@%f%F{green}%M%f %F{cyan}%~%f%F{red}]%f%F{cyan}>%f "
+
+#PS1="%F{red}[%f%F{yellow}%n%f%F{cyan}@%f%F{green}%M%f %F{cyan}%~%f%F{red}]%f
+#%F{cyan}>%f "
+
+PS1="%F{cyan}[ %f%F{green}%T%f%F{cyan} ]%f %F{cyan}[ %f%F{green}%M%f%F{cyan} ]%f
+%F{cyan}%~%f %F{green}>%f%F{cyan>%f "
+
 #PS1='%F{magenta}%n%f@%F{blue}%m%f%F{yellow}%B%~%b%f $ '
 #PS1="[%F{magenta}%n%f @%  %F{blue}%M%f %F{yellow}%~%f]> "
 #PS1="%F{yellow}[%f %F{magenta}%n%f %F{green}@%f %F{blue}%M%f %F{green}%~%f %F{yellow}]%f %F{green}>%f "
-
-#PS1="%F{cyan}%~%f %F{green}>%f "
-PS1="%F{red}[%f%F{yellow}%n%f%F{cyan}@%f%F{green}%M%f %F{cyan}%~%f%F{red}]%f%F{cyan}>%f "
-#PS1="%F{red}[%f%F{yellow}%n%f%F{cyan}@%f%F{green}%M%f %F{cyan}%~%f%F{red}]%f
-#%F{cyan}>%f "
 
 # Configurations
 unsetopt beep #beeps when errors
@@ -41,7 +47,7 @@ setopt COMPLETE_ALIASES # Aliases completation
 zstyle ':completion::complete:*' gain-privileges 1 # For running with sudo
 
 #Cowsay saying a something from fortune cokkie when open a terminal (Requieres cowsay and fortune)
-#fortune | cowsay -f tux | tee -a ~/.fortune ; echo
+#fortune | cowsay -f tux ; echo
 
 # Alias
 
