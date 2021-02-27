@@ -7,7 +7,8 @@ cd ~
 git clone --recurse-submodules https://github.com/lemonguy-104/dotfiles.git ~/.dotfiles
 cd .dotfiles
 
-# Symlink all of them. README.md and TODO needs to be deleted to symlink all.
+# Symlink all of them.
+rm LICENSE README.md
 stow *
 
 # Symlink only one, in this case, urxvt.
