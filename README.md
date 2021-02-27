@@ -4,8 +4,8 @@ How to:
 ```bash
 # Get my dotfiles.
 cd ~
-git clone --recurse-submodules https://github.com/lemonguy-104/dotfiles.git
-cd dotfiles
+git clone --recurse-submodules https://github.com/lemonguy-104/dotfiles.git ~/.dotfiles
+cd .dotfiles
 
 # Symlink all of them. README.md and TODO needs to be deleted to symlink all.
 stow *
