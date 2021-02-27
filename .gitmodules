@@ -4,3 +4,6 @@
 [submodule "nvim/.config/nvim/lightline.vim"]
 	path = nvim/.config/nvim/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
+[submodule "nvim/.config/nvim/onedark.vim"]
+	path = nvim/.config/nvim/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git

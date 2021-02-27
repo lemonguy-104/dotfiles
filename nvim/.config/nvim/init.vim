@@ -22,6 +22,7 @@ Plugin 'VundleVim/Vundle.vim' "https://github.com/VundleVim/Vundle.vim
 "Plugin 'vim-airline/vim-airline' "https://github.com/vim-airline/vim-airline
 "Plugin 'vim-airline/vim-airline-themes' "https://github.com/vim-airline/vim-airline-themes
 Plugin 'itchyny/lightline.vim' "https://github.com/itchyny/lightline.vim
+Plugin 'joshdick/onedark.vim' "https://github.com/joshdick/onedark.vim
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -150,5 +151,5 @@ let g:manu_emmet_leader_key=',' "Instead of C+y+, is now ,+,
 
 " Lightline (:h g:lightline.colorscheme)
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'onedark',
       \ }
