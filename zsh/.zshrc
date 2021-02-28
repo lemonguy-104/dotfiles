@@ -14,7 +14,7 @@ fi
 
 export EDITOR=nvim
 export BROWSER=librewolf
-export TERM=rxvt-unicode-256color
+export TERM=st-256color
 
 # History
 HISTSIZE=1000
