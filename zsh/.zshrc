@@ -8,13 +8,15 @@
 # Vi mode
 bindkey -v
 
+# Bash insulter
 if [ -f /etc/bash.command-not-found ]; then # https://gitlab.com/dwt1/bash-insulter
     . /etc/bash.command-not-found
 fi
 
+# Exports
 export EDITOR=nvim
+export TERM=alacritty
 export BROWSER=librewolf
-export TERM=st-256color
 
 # History
 HISTSIZE=1000

@@ -10,7 +10,7 @@ nitrogen --restore &
 unclutter -idle 3 &
 
 # Xresources for urxvt
-xrdb ~/.Xresources
+#xrdb ~/.Xresources
 
 # Start Xorg server
 exec dwm
