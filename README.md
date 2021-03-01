@@ -15,4 +15,4 @@ stow *
 stow urxvt
 ```
 
-Disclamer: some things may look weird, like urxvt, because it uses Mononoki Nerd Font and it needs to be installed to look as it should.
+Disclamer: some things may look weird, like urxvt or alacritty, because they use Mononoki Nerd Font and it needs to be installed to make them look as they should.
