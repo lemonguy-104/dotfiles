@@ -100,7 +100,7 @@ alias myip="curl https://ipinfo.io/ip"
 
 # random
 alias noToques="clear && cowsay 'NO TOQUES MI ORDENDOR >:u' && echo"
-alias neofetch="neofetch --w3m ~/.arch-cd.png"
+#alias neofetch="neofetch --w3m ~/.arch-cd.png"
 alias nf="neofetch | lolcat"
 alias nf1="neofetch | lolcat -a -s 500"
 alias pf="pfetch | lolcat"
