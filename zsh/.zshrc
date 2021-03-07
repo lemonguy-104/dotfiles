@@ -34,7 +34,9 @@ HISTFILE=~/.zsh_histfile
 #PS1="%F{cyan}[ %f%F{green}%T%f%F{cyan} ]%f %F{cyan}[ %f%F{green}%M%f%F{cyan} ]%f
 #%F{cyan}%~%f %F{green}>%f%F{cyan>%f "
 
-PS1="%F{cyan}[ %f%F{green}%~%f%F{cyan} ]%f %F{red}>%f%F{cyan}>%f%F{green}>%f "
+#PS1="%F{cyan}[ %f%F{green}%~%f%F{cyan} ]%f %F{red}>%f%F{cyan}>%f%F{green}>%f "
+
+PS1="%F{cyan}>%f%F{green}>%f%F{cyan}[%f%F{green}%~%f%F{cyan}]%f%F{green}:%f "
 
 #PS1='%F{magenta}%n%f@%F{blue}%m%f%F{yellow}%B%~%b%f $ '
 #PS1="[%F{magenta}%n%f @%  %F{blue}%M%f %F{yellow}%~%f]> "
