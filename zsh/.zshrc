@@ -36,7 +36,9 @@ HISTFILE=~/.zsh_histfile
 
 #PS1="%F{cyan}[ %f%F{green}%~%f%F{cyan} ]%f %F{red}>%f%F{cyan}>%f%F{green}>%f "
 
-PS1="%F{cyan}>%f%F{green}>%f%F{cyan}[%f%F{green}%~%f%F{cyan}]%f%F{green}:%f "
+#PS1="%F{cyan}>%f%F{green}>%f%F{cyan}[%f%F{green}%~%f%F{cyan}]%f%F{green}:%f "
+
+PS1="%F{red}%~%f %F{cyan}|%f "
 
 #PS1='%F{magenta}%n%f@%F{blue}%m%f%F{yellow}%B%~%b%f $ '
 #PS1="[%F{magenta}%n%f @%  %F{blue}%M%f %F{yellow}%~%f]> "
@@ -55,7 +57,7 @@ zstyle ':completion::complete:*' gain-privileges 1 # For running with sudo/doas
 #Cowsay saying a something from fortune cokkie when open a terminal (Requieres cowsay and fortune)
 #fortune | cowsay -f tux ; echo
 
-# Alias
+# = ALIAS = #
 
 #doas
 alias sudo="doas"
@@ -100,13 +102,21 @@ alias "xr"="sudo xbps-remove"
 alias "xq"="xbps-query"
 alias myip="curl https://ipinfo.io/ip"
 
-# random
-alias noToques="clear && cowsay 'NO TOQUES MI ORDENDOR >:u' && echo"
-#alias neofetch="neofetch --w3m ~/.arch-cd.png"
+# fetch tools
+alias redfetch="neofetch --ascii_colors 7 1 --colors 7 1 1 1 7 7"
+#alias zerofetch='neofetch --source ~/.zt.txt --ascii_colors 5 --colors 7 10 13 1' # DOESNT WORK ON ALACRITTY, ST OR URXVT | https://www.reddit.com/r/unixporn/comments/lx8jt1/i3gaps_zero_two/gplscla/ https://github.com/rosalogia/ZeroTwoDotfiles/blob/main/zt.txt
+#alias zerofetch='neofetch --source ~/.zt.txt --ascii_colors 5 --colors 7 1 1 1 7 7'
+#alias zerofetch='neofetch --source ~/.zt.txt --ascii_colors 5 --colors 7 5 5 5 7 7'
+alias zerofetch='neofetch --source ~/.zt.txt --ascii_colors 1 --colors 7 1 1 1 7 7'
 alias nf="neofetch | lolcat"
 alias nf1="neofetch | lolcat -a -s 500"
 alias pf="pfetch | lolcat"
 alias pf1="pfetch | lolcat -a -s 500"
+
+# random
+alias noToques="clear && cowsay 'NO TOQUES MI ORDENDOR >:u' && echo"
+
+# = ----- = #
 
 #The fuck (https://github.com/nvbn/thefuck)
 #eval $(thefuck --alias)
