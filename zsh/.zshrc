@@ -108,6 +108,7 @@ alias redfetch="neofetch --ascii_colors 7 1 --colors 7 1 1 1 7 7"
 #alias zerofetch='neofetch --source ~/.zt.txt --ascii_colors 5 --colors 7 1 1 1 7 7'
 #alias zerofetch='neofetch --source ~/.zt.txt --ascii_colors 5 --colors 7 5 5 5 7 7'
 alias zerofetch='neofetch --source ~/.zt.txt --ascii_colors 1 --colors 7 1 1 1 7 7'
+alias archfetch="neofetch --w3m ~/.arch-cd.png"
 alias nf="neofetch | lolcat"
 alias nf1="neofetch | lolcat -a -s 500"
 alias pf="pfetch | lolcat"
