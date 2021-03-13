@@ -1,6 +1,9 @@
+# Dotfiles
+
 To setup the dotfiles [GNU Stow](https://www.gnu.org/software/stow) is used.
 
-How to:
+### How to
+
 ```bash
 # Get my dotfiles.
 cd ~
@@ -15,4 +18,26 @@ stow *
 stow urxvt
 ```
 
-Disclamer: some things may look weird, like urxvt or alacritty, because they use Mononoki Nerd Font and it needs to be installed to make them look as they should.
+### Tabliss how to
+
+- Stow it.
+
+- Open your browser and install [tabliss](https://tabliss.io/)
+
+- Tabliss settings > Scroll down > Import
+
+- Go to .config/tabliss/ and select "tabliss.json"
+
+- Tabliss settings > Scroll up > Choose files
+
+- Go to .config/tabliss/ and select "015_blackBG_1920x1080.jpg"
+
+- Tabliss settings > Scroll to "Greeting" > Click the settings button > Change "lemon" for whatever name you want or leave it blank
+
+### Disclamer
+
+Some things may look weird, like urxvt or alacritty, because they use Mononoki Nerd Font and it needs to be installed to make them look as they should.
+
+### Backgrounds' source
+
+- [015_blackBG_1920x1080.jpg](https://wallhaven.cc/w/dg9o7l)
