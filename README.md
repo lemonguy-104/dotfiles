@@ -2,7 +2,7 @@
 
 To setup the dotfiles [GNU Stow](https://www.gnu.org/software/stow) is used.
 
-### How to
+### How to:
 
 ```bash
 # Get my dotfiles.
@@ -18,7 +18,7 @@ stow *
 stow urxvt
 ```
 
-### Tabliss how to
+### Tabliss how to:
 
 - Stow it.
 
@@ -34,10 +34,10 @@ stow urxvt
 
 - Tabliss settings > Scroll to "Greeting" > Click the settings button > Change "lemon" for whatever name you want or leave it blank
 
-### Disclamer
+### Disclamer:
 
 Some things may look weird, like urxvt or alacritty, because they use Mononoki Nerd Font and it needs to be installed to make them look as they should.
 
-### Backgrounds' source
+### Backgrounds' source:
 
 - [015_blackBG_1920x1080.jpg](https://wallhaven.cc/w/dg9o7l)
