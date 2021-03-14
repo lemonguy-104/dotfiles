@@ -30,7 +30,7 @@ stow urxvt
 
 - Tabliss settings > Scroll up > Choose files
 
-- Go to .config/tabliss/ and select "015_blackBG_1920x1080.jpg"
+- Go to .config/tabliss/ and select "02_pastel-blackBG_1920x1080.jpg"
 
 - Tabliss settings > Scroll to "Greeting" > Click the settings button > Change "lemon" for whatever name you want or leave it blank
 
@@ -41,3 +41,5 @@ Some things may look weird, like urxvt or alacritty, because they use Mononoki N
 ### Backgrounds' source:
 
 - [015_blackBG_1920x1080.jpg](https://wallhaven.cc/w/dg9o7l)
+
+- [02_pastel-blackBG_1920x1080.jpg](https://wallpapercave.com/w/wp6300596)

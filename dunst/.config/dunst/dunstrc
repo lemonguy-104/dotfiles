@@ -300,8 +300,8 @@
 
 [urgency_normal]
     #background = "#285577"
-    #background = "#FF0000"
-    background = "#3971ED"
+    background = "#B42132"
+    #background = "#3971ED"
     foreground = "#ffffff"
     #foreground = "#444444"
     timeout = 10
