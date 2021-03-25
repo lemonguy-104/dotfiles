@@ -86,6 +86,7 @@ alias svim='sudo vim'
 alias vim="nvim"
 alias play="mpv --fs"
 alias pdf="zathura"
+alias weather="curl wttr.in"
 
 # System
 alias pls="sudo"
