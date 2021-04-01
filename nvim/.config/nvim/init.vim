@@ -128,6 +128,9 @@ nnoremap S :%s//g<Left><Left>
 " Compile and run C/C++ source
 map <leader>c :w <CR> :!clear ; gcc % -o %< ; ./%< <CR>
 
+" Compile C/C++ source
+map <leader>C :w <CR> :!clear ; gcc % -o %<<CR>
+
 " Run python code
 map <leader>p :w <CR> :!clear ; python3 % <CR>
 
