@@ -4,13 +4,17 @@
 slstatus &
 
 # Wallpaper
-nitrogen --restore &
+#nitrogen --restore &
+variety &
 
 # Hide mouse after 3 seconds of inactivity
 unclutter -idle 3 &
 
 # Xresources for urxvt
 #xrdb ~/.Xresources
+
+# Autostart progs
+franz &
 
 # Start Xorg server
 exec dwm

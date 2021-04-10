@@ -14,6 +14,7 @@ if [ -f /etc/bash.command-not-found ]; then # https://gitlab.com/dwt1/bash-insul
 fi
 
 # Exports
+export PATH=/home/manu/.local/bin:/usr/bin:/usr/local/bin
 export EDITOR=nvim
 export TERM=alacritty
 export BROWSER=librewolf
