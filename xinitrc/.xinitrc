@@ -5,7 +5,8 @@ slstatus &
 
 # Wallpaper
 #nitrogen --restore &
-variety &
+#variety &
+$HOME/.wallpapers/zt_meteor/wallpp
 
 # Hide mouse after 3 seconds of inactivity
 unclutter -idle 3 &
