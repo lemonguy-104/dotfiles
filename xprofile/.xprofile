@@ -12,7 +12,7 @@ $HOME/.wallpapers/zt_meteor/wallpp
 unclutter -idle 3 &
 
 # Autostart progs
-franz &
+discord &
 
 # Xresources for urxvt
 #xrdb ~/.Xresources

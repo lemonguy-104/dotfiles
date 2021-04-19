@@ -15,7 +15,7 @@ unclutter -idle 3 &
 #xrdb ~/.Xresources
 
 # Autostart progs
-franz &
+discord &
 
 # Start Xorg server
 exec dwm
