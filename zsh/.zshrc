@@ -88,6 +88,7 @@ alias vim="nvim"
 alias play="mpv --fs"
 alias pdf="zathura"
 alias weather="curl wttr.in"
+alias scrcpyr="scrcpy --lock-video-orientation 1"
 
 # System
 alias pls="sudo"
